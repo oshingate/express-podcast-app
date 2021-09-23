@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+<main>
+  <section class="sec-padding hero-sec">
+    <div class="container">
+      <h1 class="text-center">User Registration form</h1>
+    </div>
+  </section>
+  <section class="sec-padding">
+    <div class="container flex center">
+      <form action="/users/register" method="POST">
+        <label for="name">Enter name:-</label>
+
+        <input type="text" placeholder="Enter Name" name="name" />
+        <label for="email">Enter Email:-</label>
+
+        <input type="email" placeholder="Enter Email" name="email" />
+
+        <label for="">Choose Account type</label>
+        <fieldset>
+          <input type="radio" id="free" name="userType" value="free" />
+          <label for="free">Free</label><br />
+          <input type="radio" id="vip" name="userType" value="vip" />
+          <label for="vip">VIP</label><br />
+          <input type="radio" id="premium" name="userType" value="premium" />
+          <label for="premium">PREMIUM</label>
+          <input type="radio" id="admin" name="userType" value="admin" />
+          <label for="admin">Admin</label>
+        </fieldset>
+        <label for="password">Enter Password:-</label>
+        <input type="text" placeholder="Enter password" name="password" />
+
+        <a href="#"><button class="btn btn-pri">Submit</button></a>
+      </form>
+    </div>
+  </section>
+</main>
+<%- include('partials/footer') %>
